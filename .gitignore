@@ -1,0 +1,55 @@
+# =====================================================================
+# docPivot .gitignore（针对整个工程）
+# 原则：源码、文档、示例入库；运行时数据、密钥、测试语料、构建产物一律不进
+# =====================================================================
+
+# ---------- Python 后端 ----------
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+
+# ---------- 运行时数据（含真实单据，严禁入库）----------
+# backend/uploads/ 存放用户上传的原始单据与识别结果，属隐私数据
+uploads/
+backend/uploads/
+*.db
+*.db-journal
+*.sqlite3
+backend/docpivot.db
+
+# ---------- 配置与密钥 ----------
+# .env 含远程主机地址等私有配置；.env.example 作为模板保留
+.env
+.env.*
+!.env.example
+
+# ---------- 前端（Vite + React + TS）----------
+node_modules/
+dist/
+dist-ssr/
+*.tsbuildinfo
+
+# ---------- 调试与临时产物 ----------
+*.log
+*.tmp
+tmp_*
+# 根目录点开头的无头浏览器截图 / 概念稿草稿（已删除，防止再生成的同类文件入库）
+.batch_*
+.side_*
+.tax_*
+.v2_*
+.v3_*
+.hero_*
+
+# ---------- IDE / 编辑器 / 系统 ----------
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ---------- 工具工作区数据 ----------
+.workbuddy/
