@@ -12,14 +12,12 @@
 
 ## 前置条件（Mac 侧，一次性）
 
-现有模型（qwen3:30b 等）均为**纯文本模型，不能识图**，需要拉一个视觉模型：
+需要拉一个视觉模型：
 
 ```bash
 ollama pull qwen2.5vl:7b     # 先跑通流程（约 6GB）
 # 质量对比阶段（M3）可再加：ollama pull qwen2.5vl:32b
 ```
-
-Mac 的 Ollama 已通过 Tailscale 暴露：`http://100.91.216.0:11434`（已写入 `backend/.env`）。
 
 ## 启动（Windows 侧）
 
